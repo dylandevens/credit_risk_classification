@@ -41,21 +41,21 @@ The purpose of this analysis is to provide the agency with key findings to guide
 
 The financial data used in this analysis includes key factors of financial loan recipients, including:
 * loan_size
-*  amount of money loaned to borrower
+*  *amount of money loaned to borrower*
 * interest_rate
-*  the intial interest rate for the loan
+*  *the intial interest rate for the loan*
 * borrower_income
-*  yearly income of the barrower
+*  *yearly income of the barrower*
 * debt_to_income
-*  debt to income ratio for borrower (lower is better)
+*  *debt to income ratio for borrower (lower is better)*
 * num_of_accounts
-*  count of credit accounts
+*  *count of credit accounts*
 * derogatory_marks
-*  sum of deragatory marks on credit report
+*  *sum of deragatory marks on credit report*
 * total_debt
-*  sum of debt owed by borrower
+*  *sum of debt owed by borrower*
 * loan_status
-*  assessment of borrower's risk. 0=healthy loan  1=high-risk loan
+*  *assessment of borrower's risk. 0=healthy loan  1=high-risk loan*
 
 The data set contains data for 77,536 individual borrowers and does not have any personally identifiable information.
 
@@ -68,67 +68,67 @@ Further testing is done after scaling the data's features. Then, the scaled data
 ## Results
 
 #### Model 1
-* Score:
+* **Score:**
 *  Training - 99.29%
 *  Test - 99.25%
-* Confusion Matrix:
+* **Confusion Matrix:**
 *  True Negative - 18655
 *  False Positive - 110
 *  False Negative - 36
 *  True Positive - 583
-* Precision:
+* **Precision:**
 *  Healthy Loan (0) - 1.0
 *  High-Risk Loan (1) - 0.84
-* Recall:
+* **Recall:**
 *  Healthy Loan (0) - 0.99
 *  High-Risk Loan (1) - 0.94
 
 
 #### Model 2 (Scaled)
-* Score:
+* **Score:**
 *  Training - 99.43%
 *  Test - 99.37%
-* Confusion Matrix:
+* **Confusion Matrix:**
 *  True Negative - 18652
 *  False Positive - 113
 *  False Negative - 9
 *  True Positive - 610
-* Precision:
+* **Precision:**
 *  Healthy Loan (0) - 1.0
 *  High-Risk Loan (1) - 0.84
-* Recall:
+* **Recall:**
 *  Healthy Loan (0) - 0.99
 *  High-Risk Loan (1) - 0.99
 
 
 ## Summary
 
-* Score
+#### Score
 *  The scores for the training and testing data increased by about .15% for model 2 (Scaled)
 *   Even though this is not an objectively high number, this increase could still be significant, and by only looking at the scores, we wouldn’t know what aspects of Model 2 were improved.
 
-* Confusion Matrix
+#### Confusion Matrix
 *  The main change here is an increase in True Positive values (and a corresponding decrease in False Negative values)  with Model 2 (Scaled).
 *  This would mean that more High-Risk Loans were identified in Model 2
 * The other aspects of the confusion matrix remained similar and the differences seem insignificant.
 
-* Classification Report
-*  Precision
-*   Healthy Loan (0)
+#### Classification Report
+*  **Precision**
+*   *Healthy Loan (0)*
 *    These values remained equal, with a value of 1.0 signifying that all the predicted healthy loans (0) were correct.
-*   High-Risk Loan (1)
+*   *High-Risk Loan (1)*
 *    For both models, 84% of high-risk loans were predicted correctly.
-*  Recall
-*   Healthy Loan (0)
+*  **Recall**
+*   *Healthy Loan (0)*
 *    Out of all the healthy loans in the test dataset, 99% were predicted correctly in both models
-*   High-Risk Loan (1)
+*   *High-Risk Loan (1)*
 *    This is where Model 2 had made improvements compared to the first model. There was a decrease from 36 to 9 False Negative values, which improved the recall from94% to 99%
 *    This means that out of all the high-risk loans in the test data, 99% were correctly predicted.
 
-* Conclusion
+#### Conclusion
 *  Model 2(Scaled) outperformed the initial logistic regression model. There were improvements in its accuracy score, and a significant reduction in false negatives. Scaling the data that the model trained and tested on led to marked improvements across the board.
 
-* Recommendations 
+#### Recommendations 
 
 Lending can be risky, and there is money to be made in managing and reducing risks for the lender. By studying data from borrowers and their resulting classification as a healthy loan or a high-risk loan, we have created a model to help inform future loan decisions. 
 There are two aspects that are important, providing healthy loans to as many people as possible, and refusing loans to applicants who would be at a high-risk of defaulting. The first aspect leads to income, and the second aspect is responsible for financial loss. Therefore, the latter aspect is more important to a lending company, because with too many high-risk loans or loans that can lead to a significant loss, the business itself can be put at risk.
