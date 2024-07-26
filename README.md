@@ -103,13 +103,13 @@ Further testing is done after scaling the data's features. Then, the scaled data
 
 ## Summary
 
-. Score
-.  The scores for the training and testing data increased by about .15% for model 2 (Scaled)
-.   Even though this is not an objectively high number, this increase could still be significant, and by only looking at the scores, we wouldn’t know what aspects of Model 2 were improved.
+) Score
+)  The scores for the training and testing data increased by about .15% for model 2 (Scaled)
+)   Even though this is not an objectively high number, this increase could still be significant, and by only looking at the scores, we wouldn’t know what aspects of Model 2 were improved.
 
-. Confusion Matrix
-.  The main change here is an increase in True Positive values (and a corresponding decrease in False Negative values)  with Model 2 (Scaled).
-.  This would mean that more High-Risk Loans were identified in Model 2
+) Confusion Matrix
+)  The main change here is an increase in True Positive values (and a corresponding decrease in False Negative values)  with Model 2 (Scaled).
+)  This would mean that more High-Risk Loans were identified in Model 2
 . The other aspects of the confusion matrix remained similar and the differences seem insignificant.
 
 . Classification Report
